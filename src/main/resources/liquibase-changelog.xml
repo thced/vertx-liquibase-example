@@ -1,0 +1,25 @@
+<databaseChangeLog
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+  xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+   http://www.liquibase.org/xml/ns/dbchangelog
+   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+  <changeSet author="thced" id="b91b137a-4859-11eb-b193-7fad90866dbe">
+    <createTable tableName="users">
+      <column autoIncrement="true" type="bigint" name="id" />
+      <column type="nvarchar(50)" name="name"/>
+    </createTable>
+  </changeSet>
+  <changeSet author="thced" id="58155cdc-4955-11eb-a1a9-3bb9de050c9e">
+    <addAutoIncrement tableName="users" columnName="id" columnDataType="bigint"/>
+  </changeSet>
+  <changeSet author="thced" id="d3b85f06-4955-11eb-bb3e-77a734839be8">
+    <addPrimaryKey tableName="users" columnNames="id"/>
+  </changeSet>
+
+
+
+</databaseChangeLog>
